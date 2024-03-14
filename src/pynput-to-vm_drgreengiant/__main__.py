@@ -18,7 +18,7 @@ if __name__ == "__main__":
     mode = input("Server or Client [s or c]? ").lower()
 
     if mode == "s":
-        myserver = server.Server("localhost", 12345)
+        myserver = server.Server("192.168.179.128", 60666)
 
         listeners = [
             lambda: pynput.keyboard.Listener(on_press=myserver.on_press, on_release=myserver.on_release),
@@ -32,6 +32,7 @@ if __name__ == "__main__":
 
             while True:
                 time.sleep(1)
+
     elif mode == "c":
         with client.Client("localhost", 12345) as myclient:
             myclient.on_bytes(myclient.sock.recv(1024))

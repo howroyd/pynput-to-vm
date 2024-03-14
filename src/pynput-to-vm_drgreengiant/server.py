@@ -32,7 +32,7 @@ class Server:
 
     def __enter__(self):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind((self.address, self.port))
+        self.sock.connect((self.address, self.port))
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
