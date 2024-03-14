@@ -1,0 +1,47 @@
+[project]
+name = "pynput-to-vm_drgreengiant"
+version = "0.0.0-dev0"
+authors = [
+  { name = "Simon Howroyd", email = "drgreengiant-github@port87.com" },
+]
+description = "Python module to listen to keyboard and mouse inputs and send them to a VM wheter they are replicated.  Intended to control multiple instances of a game."
+#keywords = ['dji', 'droneid', 'livelink aerospace', 'occusync']
+#readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: Windows",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/howroyd/pynput-to-vm"
+"Repository" = "https://github.com/howroyd/pynput-to-vm"
+"Bug Tracker" = "https://github.com/howroyd/pynput-to-vm/issues"
+
+[build-system]
+requires = ["pytest", "pytest-cov", "setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "2.0"
+python_files = ["tests/**/test_*.py", "tests/**/*_test.py"]
+addopts = [
+  "--cov=.",
+  "--cov-report=html",
+  "--cov-report=term-missing",
+  #  "--cov-fail-under=95",
+]
+filterwarnings = "ignore::DeprecationWarning"

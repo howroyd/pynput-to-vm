@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings" :{
+		"discord.detailsIdling": "Meik's super secret project",
+		"discord.detailsEditing": "Meik's super secret project",
+		"discord.detailsDebugging": "Meik's super secret project",
+		"editor.formatOnSave": true
+	}
+}
