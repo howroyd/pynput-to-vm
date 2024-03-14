@@ -4,10 +4,13 @@
 			"path": "."
 		}
 	],
-	"settings" :{
-		"discord.detailsIdling": "Meik's super secret project",
-		"discord.detailsEditing": "Meik's super secret project",
-		"discord.detailsDebugging": "Meik's super secret project",
+	"settings": {
+		"discord.detailsIdling": "Giannis is spreading misinformation",
+		"discord.detailsEditing": "Giannis is spreading misinformation",
+		"discord.detailsDebugging": "Giannis is spreading misinformation",
+		//"discord.detailsIdling":    "Meik's super secret project",
+		//"discord.detailsEditing":   "Meik's super secret project",
+		//"discord.detailsDebugging": "Meik's super secret project",
 		"editor.formatOnSave": true
 	}
 }
